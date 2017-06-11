@@ -1,0 +1,67 @@
+body {
+    background-color: #333333;
+    color: black;
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+}
+
+input {
+    color:black;
+}
+
+td.left {
+    text-align: left;
+}
+
+td.right {
+    text-align: right;
+}
+
+.content {
+    background-color: rgba(0, 0, 0, 0);
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    -webkit-animation: fadein 0.8s;
+
+}
+
+#game{
+    position: relative;
+    z-index: 0;
+}
+
+#blackout {
+    position: absolute;
+    margin-right: auto;
+    margin-left: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+
+    color: white;
+
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+
+    font-size: 70px;
+
+    -webkit-animation: fadein 0.6s;
+}
+
+canvas{
+    position:relative;
+    z-index: 0;
+}
+
+form.account {
+    padding: 1%;
+    margin-bottom: 1%;
+    background-color: lightsteelblue;
+    display: inline-block;
+    box-shadow: rgba(0,0,0,.4) 1px 1px;
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Stay Woke</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="text/javascript" src="js/engine/Engine.js"></script>
+    <script type="text/javascript" src="js/engine/Vector.js"></script>
+</head>
+<body onload="main()">
+<div class="content">
+   <div id="game">
+       <div id="blackout">
+           <p>Game Over</p>
+           <p id="score">Score: 0</p>
+           <p>Highscore: 0</p>
+           <form id="scoreform" method="post" action="" style="display: none">
+               <input type="hidden" id="highscore" name="highscore">
+               <input style="width: 500px" type="submit" name="submit" value="Post Highscore">
+           </form>
+           <input style="width: 500px" type="button" onclick="location.reload();" value="Retry?">
+       </div>
+       <canvas id="canvas"></canvas>
+   </div>
+</div>
+<script src="js/Game.js"></script>
+</body>
+</html>

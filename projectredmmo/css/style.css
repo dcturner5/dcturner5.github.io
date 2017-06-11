@@ -1,0 +1,316 @@
+@font-face {
+    font-family: 'pokefont';
+    src: url('../res/pokefont.ttf');
+}
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'pokefont';
+}
+canvas {
+    border: 1px solid;
+}
+
+div.client-list {
+    font-family: 'pokefont';
+    font-size: 32pt;
+    padding-left: 8px;
+    text-align: left;
+}
+
+div.client-list div {
+    display: inline-block;
+    margin-left: 12px;
+}
+
+div#container {
+    position: relative;
+    display: inline-block;
+}
+div.text {
+    font-family: 'pokefont';
+    font-size: 24pt;
+    text-shadow: 1px 1px #685870, 2px 2px #685870;
+    color: white;
+}
+
+img {
+    user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+span.red {
+    color: red;
+}
+span.orange {
+    color: orange;
+}
+span.yellow {
+    color: yellow;
+}
+span.green {
+    color: green;
+}
+span.server {
+    color: #e60000;
+    text-shadow: 1px 1px black, 2px 2px black;
+}
+span.admin {
+    color: purple;
+    text-shadow: 1px 1px black, 2px 2px black;
+}
+span.blue {
+    color: blue;
+}
+span.purple {
+    color: purple;
+}
+span.black {
+    color: black;
+}
+body {
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    background: url("../res/background.png");
+    background-size: 256px 256px;
+    text-align: center;
+}
+
+div.header {
+    background: rgba(0,0,0,.5);
+    text-align: center;
+    position: relative;
+}
+
+div.min-header {
+    background: rgba(211,0,0,1);
+    position: fixed;
+    width: 100%;
+    display: none;
+    border-bottom: solid 2px black;
+}
+
+div.min-header a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: inline-block;
+    width: 160px;
+}
+
+div.min-header a:hover {
+    background-color: rgba(200,0,0,1);
+}
+
+div.content {
+    text-align: center;
+}
+
+div#mainDropdown {
+    font-size: 20pt;
+}
+
+div.dropdown-btn {
+    background: url("../res/button/dropdown.png");
+    background-size: cover;
+    display: inline-block;
+    width: 72px;
+    height: 72px;
+    position: absolute;
+    top: 22%;
+    left: 93%;
+}
+
+div.dropdown-btn:hover {
+    cursor: pointer;
+}
+
+div.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    width: 240px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    top: 80px;
+    left: -160px;
+    z-index: 1;
+}
+
+div.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+div.dropdown-content a:hover {
+    background-color: #f1f1f1
+}
+
+div.profile {
+    position: absolute;
+    text-align: left;
+    background-color: rgba(211,0,0,1);
+    width: 8%;
+    height: 100%;
+}
+
+div.nametag {
+    font-size: 20pt;
+}
+
+div.show {
+    display: inline-block;
+}
+
+img {
+    user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+img.logo {
+    width: 30%;
+    padding: 8px;
+}
+
+img.top {
+    position: absolute;
+    width: 42px;
+    left: 96%;
+}
+
+img.top:hover {
+    cursor: pointer;
+}
+
+img.product-img {
+    width: 128px;
+    height: 192px;
+}
+
+input.btn-black {
+    background-color: #000000;
+    border: none;
+    color: white;
+    padding: 8px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+input.btn-black:hover {
+    cursor: pointer;
+}
+
+input.cart {
+    background: url("../res/button/cart.png");
+    background-size: cover;
+    width: 64px;
+    height: 64px;
+    margin-top: 32px;
+    cursor: pointer;
+}
+
+input.delete {
+    background: url("../res/button/delete.png");
+    background-size: cover;
+    width: 64px;
+    height: 64px;
+    margin-top: 32px;
+    cursor: pointer;
+}
+
+input.select {
+    background: url("../res/button/select.png");
+    background-size: cover;
+    width: 64px;
+    height: 64px;
+    margin-top: 32px;
+    cursor: pointer;
+}
+
+input {
+    font-size: 18pt;
+}
+
+input.required {
+    background-color: #ffaeae;
+}
+
+input.required::-webkit-input-placeholder {
+    color: #555;
+}
+input.required:-moz-placeholder {
+    color: #555;
+}
+input.required::-moz-placeholder {
+    color: #555;
+}
+input.required:-ms-input-placeholder {
+    color: #555;
+}
+
+li.product {
+    background-color: #f1f1f1;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    width: 40%;
+    display: inline-block;
+    margin: 1%;
+    margin-top: 0;
+    text-align: center;
+}
+
+div.product-cat {
+    display: inline-block;
+    padding: 5%;
+}
+
+div.product-img {
+    float: left;
+    padding: 0 5% 0 5%;
+}
+
+div.product-detail {
+    float: inherit;
+}
+
+div.product-detail span {
+    float: left;
+}
+
+div.product-rate {
+    float: right;
+}
+
+ul.products {
+    padding: 16px;
+    text-align: left;
+    margin-left: 13%;
+}
+
+span.product-name {
+    font-size: 18pt;
+}
+span.product-price {
+    font-size: 18pt;
+    color: rgb(211,0,0);
+}
+
+form.account {
+    background-color: #f1f1f1;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    width: 20%;
+    display: inline-block;
+    margin: 1%;
+    padding: 2% 0 2% 0;
+}

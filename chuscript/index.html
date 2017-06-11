@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ChuScript</title>
+    <link rel="shortcut icon" type="image/png" href="favicon.ico"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="style.css?1">
+	<script src="ChuScript.js?1"></script>
+</head>
+<body onload="main()">
+	<div class="container">
+        <div class="page-header">
+            <h1><span class="color highlight">Chu</span>Script</h1>
+            <h5>Dalton Turner</h5>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h3>Overview</h3>
+            </div>
+            <div class="col-sm-6 col-xs-12">
+                <p>ChuScript is a programming language parsed and interpreted in Javascript. The goal of it was simplicity and the possibility of it being used to teach beginners basic principles in
+                    coding. As a result, there is only one data type in the language: numbers. These numbers can be floats or integers and have the same limitations in terms of size that the Number type
+                    variables in Javascript have.</p>
+                <p>There four keywords of this language are <span class="highlight">input</span>, <span class="highlight">print</span>, <span class="highlight">if</span>, and <span class="highlight">
+                    function</span>. The <span class="highlight">input</span> keyword is similar to a prompt() in Javascript and is used to store user input in a variable. <span class="highlight">Print
+                </span> allows the user to output an expression to the console. An <span class="highlight">if</span> statement resembles most C languages, but at the moment, is limited to the inline
+                    style without a block structure following it.</p>
+            </div>
+            <div class="ide-container col-sm-6  col-xs-12">
+                <div class="ide">
+                    <textarea class="input" placeholder="Input" style="height: 300px">Example of a basic program in ChuScript;
+
+input a;
+
+if(a > 2)
+    print a * 3;
+
+if(a <= 2)
+    print a / 2;</textarea><br>
+                    <div>
+                        <textarea readonly class="output" placeholder="Output" value=""></textarea>
+                        <input type="button" class="run btn" value="Run">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <h3>Functions</h3>
+            </div>
+            <div class="col-sm-6  col-xs-12">
+                <p>Functions in ChuScript have nearly identical syntax to functions in Javascript. They can be placed inside parent functions while still not being accessible outside the parent's scope.</p>
+                <p>The main difference between Javascript and ChuScript methods are how they return values. ChuScript does not use the <span class="highlight">return</span> keyword like Java and
+                    Javascript, instead reference variables are used mainly because you can return multiple sets of data with one function call. Reference variables are noted in the function's parameters
+                    by a dollar sign in front of the variable name. If a reference variable's data is changed during the function's execution, it also changes the corresponding variable passed into the
+                    function as an argument.
+                </p>
+            </div>
+            <div class="ide-container col-sm-6  col-xs-12">
+                <div class="ide">
+                    <textarea class="input" placeholder="Input" style="height: 246px">Example of a method;
+
+a = 5;
+b = 6;
+
+multiply(a, b);
+
+function multiply(x, y) {
+    print x * y;
+}</textarea><br>
+                    <div>
+                        <textarea readonly class="output" placeholder="Output" value=""></textarea>
+                        <input type="button" class="run btn" value="Run">
+                    </div>
+                </div>
+                <div class="ide">
+                    <textarea class="input" placeholder="Input" style="height: 336px">Example of reference variables;
+
+a = 6;
+b = 3;
+
+swap(a, b);
+print a;
+print b;
+
+function swap($x, $y) {
+    temp = $x;
+    $x = $y;
+    $y = temp;
+}</textarea><br>
+                    <div>
+                        <textarea readonly class="output" placeholder="Output" value=""></textarea>
+                        <input type="button" class="run btn" value="Run">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <h3>Looping</h3>
+            </div>
+            <div class="col-sm-6  col-xs-12">
+                <p>Proper <span class="highlight">for</span> and <span class="highlight">while</span> loops are not a feature of this language. Currently, the only way to implement a loop is to use a combination of functions and if statements as seen in this example.
+                </p>
+            </div>
+            <div class="ide-container col-sm-6  col-xs-12">
+                <div class="ide">
+                    <textarea class="input" placeholder="Input" style="height: 272px">Example of looping using the Fibonacci sequence;
+
+max = 10;
+
+fibonacci(1, 0, max, 0);
+
+function fibonacci(x, y, max, i) {
+    z = x + y;
+    print z;
+    if(i < max - 1) fibonacci(y, z, max, i + 1);
+}</textarea><br>
+                    <div>
+                        <textarea readonly class="output" placeholder="Output" value=""></textarea>
+                        <input type="button" class="run btn" value="Run">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <h3>Flexible Interpreter</h3>
+            </div>
+            <div class="col-sm-6  col-xs-12">
+                <p>In ChuScript, whitespace and line breaks do not matter to the interpreter. This allows for more options in your coding style as long as your brackets, semicolons and keywords are properly placed.</p>
+            </div>
+            <div class="ide-container col-sm-6  col-xs-12">
+                <div class="ide">
+                    <textarea class="input" placeholder="Input" style="height: 272px">Condensed code without whitespace runs the same as above;
+
+max=10;fibonacci(1,0,max,0);functionfibonacci(x,y,max,i){z =x+y;printz;if(i<max-1)fibonacci(y,z,max,i+1);}</textarea><br>
+                    <div>
+                        <textarea readonly class="output" placeholder="Output" value=""></textarea>
+                        <input type="button" class="run btn" value="Run">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row buttons">
+            <a href="ChuScript.js" download style="display: inline; padding: 0; margin: 0;"><button type="submit" class="btn">Download</button></a>
+            <a href="https://github.com/turner-dalton-wm/ChuScript" style="display: inline; padding: 0; margin: 0;"><button type="submit" class="btn">Github</button></a>
+        </div>
+    </div>
+	<script>
+		var engines = [];
+		function main() {
+            var inputs = document.getElementsByClassName("input");
+            var outputs = document.getElementsByClassName("output");
+            var runs = document.getElementsByClassName("run");
+
+            for(var i = 0; i < inputs.length; i++) {
+                var engine = new ScriptEngine(inputs[i], outputs[i]);
+                runs[i].onclick = engine.run.bind(engine);
+                engines.push(engine);
+            }
+		}
+	</script>
+	<script>
+
+
+	</script>
+</body>
+</html>

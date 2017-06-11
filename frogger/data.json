@@ -1,0 +1,10 @@
+{
+  "characters": [
+    {"name": "Boy", "speed": 5, "sprite": "images/char-boy.png"},
+    {"name": "Girl", "speed": 6, "sprite": "images/char-cat-girl.png"},
+    {"name": "Horn", "speed": 7, "sprite": "images/char-horn-girl.png"},
+    {"name": "Pink", "speed": 8, "sprite": "images/char-pink-girl.png"},
+    {"name": "Princess", "speed": 10, "sprite": "images/char-princess-girl.png"}
+  ],
+  "highscore": 0
+}

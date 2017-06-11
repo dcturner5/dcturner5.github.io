@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WebGL</title>
+    <style>
+        body {
+            color: #aaaaaa;
+            background-color: #333333;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<h3>WebGL Mesh</h3>
+<canvas id="glcanvas" width="800" height="480" style="width: 70%; background-color:#557DA8;"></canvas>
+<p>W: Forward, S: Backward, Q: Turn Left, E: Turn Right, Space: Jump</p>
+<script id="vertex" type="vertex-shader">
+	precision mediump float;
+
+    attribute vec3 a_position;
+    attribute vec4 a_color;
+
+    uniform mat4 u_world;
+    uniform mat4 u_view;
+    uniform mat4 u_proj;
+
+    varying lowp vec4 v_color;
+
+    void main() {
+      gl_Position = u_proj * u_view * u_world * vec4(a_position, 1.0);
+      v_color = a_color;
+    }
+</script>
+
+<script id="fragment" type="fragment-shader">
+	precision mediump float;
+
+	varying lowp vec4 v_color;
+
+	void main(void) {
+		gl_FragColor = v_color;
+    }
+</script>
+
+<script type="application/javascript" src="js/gl-matrix.js"></script>
+<script type="application/javascript" src="js/app.js"></script>
+<script>
+    var engine = new Engine('glcanvas');
+    engine.initShader('fragment', 'vertex');
+    engine.update = update;
+    engine.render = render;
+    engine.init = init;
+    engine.start();
+
+    var velocity;
+    var mesh, model;
+    function init() {
+        velocity = 0;
+
+        mesh = new Mesh(engine, 64);
+        mesh.generate(32, 16);
+
+        /*model = new Model(engine, 16);
+        model.initBuffer([
+                    //TOP
+                    -1.0, 1.0, -1.0,
+                    -1.0, 1.0, 1.0,
+                    1.0, 1.0, 1.0,
+                    1.0, 1.0, -1.0,
+                    // Left
+                    -1.0, 1.0, 1.0,
+                    -1.0, -1.0, 1.0,
+                    -1.0, -1.0, -1.0,
+                    -1.0, 1.0, -1.0,
+                    // Right
+                    1.0, 1.0, 1.0,
+                    1.0, -1.0, 1.0,
+                    1.0, -1.0, -1.0,
+                    1.0, 1.0, -1.0,
+                    // Front
+                    1.0, 1.0, 1.0,
+                    1.0, -1.0, 1.0,
+                    -1.0, -1.0, 1.0,
+                    -1.0, 1.0, 1.0,
+                    // Back
+                    1.0, 1.0, -1.0,
+                    1.0, -1.0, -1.0,
+                    -1.0, -1.0, -1.0,
+                    -1.0, 1.0, -1.0,
+                    // Bottom
+                    -1.0, -1.0, -1.0,
+                    -1.0, -1.0, 1.0,
+                    1.0, -1.0, 1.0,
+                    1.0, -1.0, -1.0
+                ],
+                [
+                    // Top
+                    0, 1, 2,
+                    0, 2, 3,
+                    // Left
+                    5, 4, 6,
+                    6, 4, 7,
+                    // Right
+                    8, 9, 10,
+                    8, 10, 11,
+                    // Front
+                    13, 12, 14,
+                    15, 14, 12,
+                    // Back
+                    16, 17, 18,
+                    16, 18, 19,
+                    // Bottom
+                    21, 20, 22,
+                    22, 20, 23],
+                [
+                    //TOP
+                    0.0, 1.0, 0.0, 1.0,
+                    0.0, 1.0, 1.0, 1.0,
+                    1.0, 1.0, 1.0, 1.0,
+                    1.0, 1.0, 0.0, 1.0,
+                    // Left
+                    0.0, 1.0, 1.0, 1.0,
+                    0.0, 0.0, 1.0, 1.0,
+                    0.0, 0.0, 0.0, 1.0,
+                    0.0, 1.0, 0.0, 1.0,
+                    // Right
+                    1.0, 1.0, 1.0, 1.0,
+                    1.0, 0.0, 1.0, 1.0,
+                    1.0, 0.0, 0.0, 1.0,
+                    1.0, 1.0, 0.0, 1.0,
+                    // Front
+                    1.0, 1.0, 1.0, 1.0,
+                    1.0, 0.0, 1.0, 1.0,
+                    0.0, 0.0, 1.0, 1.0,
+                    0.0, 1.0, 1.0, 1.0,
+                    // Back
+                    1.0, 1.0, 0.0, 1.0,
+                    1.0, 0.0, 0.0, 1.0,
+                    0.0, 0.0, 0.0, 1.0,
+                    0.0, 1.0, 0.0, 1.0,
+                    // Bottom
+                    0.0, 0.0, 0.0, 1.0,
+                    0.0, 0.0, 1.0, 1.0,
+                    1.0, 0.0, 1.0, 1.0,
+                    1.0, 0.0, 0.0, 1.0
+                ]);*/
+    }
+
+    function update() {
+        var speed = .8;
+        if(engine.key("W")) {
+            engine.camera.eye[0] += Math.cos(engine.camera.yaw) * speed;
+            engine.camera.eye[2] += Math.sin(engine.camera.yaw) * speed;
+        }
+        if(engine.key("S")) {
+            engine.camera.eye[0] -= Math.cos(engine.camera.yaw) * speed;
+            engine.camera.eye[2] -= Math.sin(engine.camera.yaw) * speed;
+        }
+
+        var turnSpeed = .025;
+        if(engine.key("Q")) engine.camera.yaw -= turnSpeed;
+        if(engine.key("E")) engine.camera.yaw += turnSpeed;
+
+        if(engine.key("SPACE") && engine.camera.eye[1] == 8) velocity = .4;
+
+        engine.camera.eye[1] += velocity;
+        velocity -= .02;
+
+        if(engine.camera.eye[1] < 8) {
+            engine.camera.eye[1] = 8;
+            velocity = 0;
+        }
+
+        engine.camera.update();
+    }
+
+    function render() {
+        mesh.render();
+        //model.render();
+    }
+
+    function getTerrainHeight(x, y, vertices) {
+        var size = 32;
+        var scale = 256;
+        var col = Math.floor((x + scale) / (size / 2));
+        var row = Math.floor((y + scale) / (size / 2));
+
+        var lx = (x + scale / 2) / size - col;
+        var ly = (y + scale / 2) / size - row;
+
+        var i1 = col + row * size;
+        var i2 = (col + 1) + (row + 1) * size;
+        var i3 = (col + 1) + row * size;
+
+        if(ly > 1 - lx) {
+            i3 = col + (row + 1) * size;
+        }
+
+        var x1 = vertices[i1 * 3] * scale;
+        var y1 = vertices[i1 * 3 + 1] * scale;
+        var z1 = vertices[i1 * 3 + 2] * scale;
+        var x2 = vertices[i2 * 3] * scale;
+        var y2 = vertices[i2 * 3 + 1] * scale;
+        var z2 = vertices[i2 * 3 + 2] * scale;
+        var x3 = vertices[i3 * 3] * scale;
+        var y3 = vertices[i3 * 3 + 1] * scale;
+        var z3 = vertices[i3 * 3 + 2] * scale;
+
+        var det = (z2 - z3) * (x1 - x3) + (x3 - x2) * (z1 - z3);
+        var l1 = ((z2 - z3) * (x - x3) + (x3 - x2) * (y - z3)) / det;
+        var l2 = ((z3 - z1) * (x - x3) + (x1 - x3) * (y - z3)) / det;
+        var l3 = 1.0 - l1 - l2;
+        return l1 * y1 + l2 * y2 + l3 * y3;
+    }
+</script>
+
+</body>
+</html>

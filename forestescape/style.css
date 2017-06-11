@@ -1,0 +1,84 @@
+body {
+    background-color: #444;
+    /*text-align: center;*/
+}
+
+div.container {
+    color: white;
+}
+
+div.row {
+    background-color: #555;
+    margin: 2% 0 2% 0;
+    padding-bottom: 1%;
+}
+
+p {
+    font-size: large;
+}
+
+span.highlight {
+    font-weight: bold;
+}
+
+span.color {
+    color: #2e9b00;
+}
+
+h3 {
+    color: #2e9b00;
+    font-weight: bold;
+}
+
+div.buttons {
+    text-align: center;
+    padding: 2.5%;
+}
+
+button.btn {
+    color: black;
+    margin: 1%;
+    width: 10%;
+}
+
+div.img-overview {
+    text-align: center;
+}
+
+img.img-overview {
+    width: 30%;
+    margin: 0 5% 0 5%;
+}
+
+div.img-dev {
+    text-align: center;
+}
+
+img.img-dev {
+    width: 10vw;
+    height: 7vw;
+    margin: 1%;
+    z-index: 2;
+}
+
+div.img-mech {
+
+}
+
+img.img-mech {
+    width: 11vw;
+    height: 18vw;
+    margin: 0 1% 0 1%;
+}
+
+div.img-cont {
+
+}
+
+img.img-cont {
+    width: 100%;
+}
+
+div.img-gply {
+    text-align: center;
+}

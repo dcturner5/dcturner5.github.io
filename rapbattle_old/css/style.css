@@ -1,0 +1,141 @@
+a {
+    color: white;
+    text-decoration: underline;
+}
+
+a.list {
+    color: #a4b2b1;
+    font-size: 36pt;
+    display: inline-block;
+    width: 100%;
+}
+
+body {
+    background-color: #222222;
+    font-family: "Arial";
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+}
+
+div#battle-list {
+    background-color: #c74646;
+    display: inline-block;
+    width: 60%;
+}
+
+div.header {
+    text-align: center;
+    margin: 2%;
+}
+
+div.header a {
+    color: #c74646;
+    font-size: 24pt;
+    text-decoration: none;
+    margin-left: 1%;
+}
+
+div.content {
+    text-align: center;
+}
+
+div.wait {
+    color: #a4b2b1;
+    font-size: 36pt;
+    text-align: center;
+}
+
+h3 {
+    color: #c74646;
+    margin: 0px;
+}
+
+input.required {
+    background-color: #ffaeae;
+}
+
+input.required::-webkit-input-placeholder {
+    color: #555;
+}
+input.required:-moz-placeholder {
+    color: #555;
+}
+input.required::-moz-placeholder {
+    color: #555;
+}
+input.required:-ms-input-placeholder {
+    color: #555;
+}
+
+table.battle {
+    width: 60%;
+    background-color: #c74646;
+    border-collapse: collapse;
+}
+
+tr.battle {
+    border-bottom: 4px solid #222222;
+}
+
+tr.host {
+    background-color: #a4b2b1;
+}
+
+tr.opponent {
+    background-color: #7e8889;
+}
+
+tr.battle input {
+    width: 99%;
+    height: 42px;
+    font-size: 18pt;
+}
+
+tr.battle td {
+    height: 48px;
+    font-size: 16pt;
+}
+
+td.line {
+    width: 100%;
+    text-align: left;
+    display: inline-block;
+    word-wrap: break-word;
+    overflow: hidden;
+}
+
+td.upvote {
+    width: 48px;
+    background-image: url("../res/thumbup.png");
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+
+td.upvote:active {
+    background-size: 40% 40%;
+}
+
+td.downvote {
+    width: 48px;
+    background-image: url("../res/thumbdown.png");
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+
+td.downvote:active {
+    background-size: 40% 40%;
+}
+
+td.rating {
+    width: 48px;
+    text-align: center;
+    border-left: 4px solid #222222;
+}
+
+span.rank {
+    font-size: 36pt;
+}

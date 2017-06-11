@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JsFrame</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="JsFrame.js"></script>
+</head>
+<body onload="main()">
+<div class="container">
+    <div class="page-header">
+        <h1><span class="color highlight">Js</span>Frame</h1>
+        <h5>Dalton Turner</h5>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6 column">
+            <div>
+                <h3>Overview</h3>
+            </div>
+            <div>
+                <p>JSFrame is a javascript plugin that allows for custom pop-up frames.</p>
+                <p>The frames are draggable by clicking on the top header of the frame and can be closed by clicking the X button
+                    in the corner.</p>
+                <p>Simply create a div with the class of "JsFrame" and set parameters using the HTML "data-" attributes.</p>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div>
+                <h3>Demo</h3>
+            </div>
+            <div>
+                <button onclick="addFrame()" class="btn" style="width: 20%;">Add JsFrame</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="row buttons">
+        <a href="JsFrame.js" download style="display: inline; padding: 0; margin: 0;"><button type="submit" class="btn">Download</button></a>
+        <a href="https://github.com/turner-dalton-wm/" style="display: inline; padding: 0; margin: 0;"><button type="submit" class="btn">Github</button></a>
+    </div>
+</div>
+<script>
+    function addFrame() {
+        document.body.innerHTML += '<div class="JsFrame" data-title="Test JsFrame" data-y="400" data-color="black" data-resizable="both"><h1>Hello World</h1></div>';
+        JsFrame.update();
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+canvas {
+    border: 1px solid;
+}
+
+div.client-list {
+    font-size: 32pt;
+    padding-left: 8px;
+    text-align: left;
+}
+
+div.client-list div {
+    display: inline-block;
+    margin-left: 12px;
+    height: 96px;
+}
+
+div#container {
+    position: relative;
+    display: inline-block;
+}
+
+img {
+    user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+span.red {
+    color: red;
+}
+span.orange {
+    color: orange;
+}
+span.yellow {
+    color: yellow;
+}
+span.green {
+    color: green;
+}
+span.server {
+    color: #e60000;
+    text-shadow: 1px 1px black, 2px 2px black;
+}
+span.admin {
+    color: purple;
+    text-shadow: 1px 1px black, 2px 2px black;
+}
+span.blue {
+    color: blue;
+}
+span.purple {
+    color: purple;
+}
+span.black {
+    color: black;
+}
+body {
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    background-color: #333333;
+    text-align: center;
+}
+
+div.header {
+    background: rgba(0,0,0,.5);
+    text-align: center;
+    position: relative;
+}
+
+div.min-header {
+    background: rgba(211,0,0,1);
+    position: fixed;
+    width: 100%;
+    display: none;
+    border-bottom: solid 2px black;
+}
+
+div.min-header a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: inline-block;
+    width: 160px;
+}
+
+div.min-header a:hover {
+    background-color: rgba(200,0,0,1);
+}
+
+div.content {
+    text-align: center;
+}
+
+
+div.nametag {
+    font-size: 20pt;
+}
+
+img {
+    user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+img.logo {
+    width: 30%;
+    padding: 8px;
+}
+
+img.top {
+    position: absolute;
+    width: 42px;
+    left: 96%;
+}
+
+img.top:hover {
+    cursor: pointer;
+}
+
+img.product-img {
+    width: 128px;
+    height: 192px;
+}
