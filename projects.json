@@ -1,0 +1,76 @@
+{
+  "projects": [
+    {
+      "name": "ChuScript",
+      "link": "chuscript/index.html",
+      "img": "res/chuscript.png",
+      "languages": ["JavaScript"],
+      "tags": ["Language"],
+      "year": 2017
+    },
+    {
+      "name": "JSFrame",
+      "link": "jsframe/index.html",
+      "img": "res/jsframe.png",
+      "languages": ["JavaScript"],
+      "tags": ["Library"],
+      "year": 2016
+    },
+    {
+      "name": "WebGL Demo",
+      "link": "webgl/index.html",
+      "img": "res/webgl.png",
+      "languages": ["JavaScript"],
+      "tags": [],
+      "year": 2015
+    },
+    {
+      "name": "English Sentence Rearranger",
+      "link": "wordproject/index.html",
+      "img": "res/wordproject.png",
+      "languages": ["JavaScript"],
+      "tags": [],
+      "year": 2015
+    },
+    {
+      "name": "Block Rush",
+      "link": "blockrush/index.html",
+      "img": "res/blockrush.png",
+      "languages": ["JavaScript"],
+      "tags": ["Game"],
+      "year": 2014
+    },
+    {
+      "name": "Tower Defense",
+      "link": "cannonrush/index.html",
+      "img": "res/cannonrush.png",
+      "languages": ["JavaScript"],
+      "tags": ["Game"],
+      "year": 2014
+    },
+    {
+      "name": "Project Red",
+      "link": "projectred/index.html",
+      "img": "res/projectred.png",
+      "languages": ["JavaScript"],
+      "tags": ["Game"],
+      "year": 2016
+    },
+    {
+      "name": "Forest Escape",
+      "link": "forestescape/index.html",
+      "img": "res/forestescape.png",
+      "languages": ["Java"],
+      "tags": ["Game"],
+      "year": 2016
+    },
+    {
+      "name": "Journey",
+      "link": "journey/index.html",
+      "img": "res/journey.png",
+      "languages": ["Java"],
+      "tags": ["Game"],
+      "year": 2017
+    }
+  ]
+}

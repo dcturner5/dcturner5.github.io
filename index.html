@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <title>Portfolio</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css?1">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="projects.json"></script>
 </head>
 <body>
 <div class="container">
@@ -29,7 +30,7 @@
                 <p>Contact Info:</p>
                 Email: <a href="mailto:dcturner555@gmail.com">dcturner555@gmail.com</a><br>
                 LinkedIn: <a href="https://www.linkedin.com/in/dalton-t-89048011b/">Click Here</a><br>
-                Github: <a href="https://github.com/turner-dalton-wm">Click Here</a>
+                Github: <a href="https://github.com/dcturner5">Click Here</a>
             </div>
         </div>
         <div class="col-sm-4 picture">
@@ -37,95 +38,144 @@
         </div>
     </div>
 </div>
-<div class="container">
-    <div class="row row-color">
-        <div class="col-sm-12">
-            <h2 class="section-title">Projects</h2>
-            <h3>Websites</h3>
-            <!--<a target="_blank" href="blog/index.php">
-                <div class="square">
-                    <img src="res/blog.png" class="preview">
-                    <p class="title">Blog</p>
-                </div>
-            </a>-->
-            <a target="_blank" href="chuscript/index.html">
-                <div class="square">
-                    <img src="res/chuscript.png" class="preview">
-                    <p class="title">ChuScript (2017)</p>
-                </div>
-            </a>
-            <a target="_blank" href="jsframe/index.html">
-                <div class="square">
-                    <img src="res/jsframe.png" class="preview">
-                    <p class="title">JsFrame (2016)</p>
-                </div>
-            </a>
-            <a target="_blank" href="webgl/index.html">
-                <div class="square">
-                    <img src="res/webgl.png" class="preview">
-                    <p class="title">WebGL Mesh (2015)</p>
-                </div>
-            </a>
-            <a target="_blank" href="wordproject/index.html">
-                <div class="square">
-                    <img src="res/wordproject.png" class="preview">
-                    <p class="title">Word Project (2015)</p>
-                </div>
-            </a>
-        </div>
-    </div>
-    <div class="row row-color">
-        <div class="col-sm-12">
-            <h3>HTML Games</h3>
-            <a target="_blank" href="blockrush/index.html">
-                <div class="square">
-                    <img src="res/blockrush.png" class="preview">
-                    <p class="title">Block Rush (2014)</p>
-                </div>
-            </a>
-            <a target="_blank" href="cannonrush/index.html">
-                <div class="square">
-                    <img src="res/cannonrush.png" class="preview">
-                    <p class="title">Cannon Rush (2014)</p>
-                </div>
-            </a>
-            <!--<a target="_blank" href="flappybird/index.html">
-                <div class="square">
-                    <img src="res/flappybird.png" class="preview">
-                    <p class="title">Flappy Bird Clone</p>
-                </div>
-            </a>-->
-            <a target="_blank" href="projectred/index.html">
-                <div class="square">
-                    <img src="res/projectred.png" class="preview">
-                    <p class="title">Project Red (2016)</p>
-                </div>
-            </a>
-            <a target="_blank" href="staywoke/index.html">
-                <div class="square">
-                    <img src="res/staywoke.png" class="preview">
-                    <p class="title">Stay Woke (2016)</p>
-                </div>
-            </a>
-        </div>
-    </div>
-    <div class="row row-color row-gap">
-        <div class="col-sm-12">
-            <h3>Java Games</h3>
-            <a target="_blank" href="forestescape/index.html">
-                <div class="square">
-                    <img src="res/forestescape.png" class="preview">
-                    <p class="title">Forest Escape (2016)</p>
-                </div>
-            </a>
-            <a target="_blank" href="journey/index.html">
-                <div class="square">
-                    <img src="res/journey.png" class="preview">
-                    <p class="title">Journey (2017)</p>
-                </div>
-            </a>
-        </div>
-    </div>
-</div>
+<div id="projects" class="container"></div>
+<script>
+    let projects = [
+        {
+            "name": "Blueprint Engine",
+            "link": "blueprint/index.html",
+            "img": "",
+            "languages": ["Java"],
+            "tags": ["Engine"],
+            "year": 2018
+        },
+        /*{
+            "name": "Lyric Bot"
+        },*/
+        {
+            "name": "AxilScript",
+            "link": "axilscript",
+            "img": "res/axilscript.png",
+            "languages": ["Java"],
+            "tags": ["Language"],
+            "year": 2018
+        },
+        {
+            "name": "ChuScript",
+            "link": "chuscript",
+            "img": "res/chuscript.png",
+            "languages": ["JS"],
+            "tags": ["Language"],
+            "year": 2017
+        },
+        {
+            "name": "JSFrame",
+            "link": "jsframe",
+            "img": "res/jsframe.png",
+            "languages": ["JS"],
+            "tags": ["Library"],
+            "year": 2016
+        },
+        {
+            "name": "PDF Edit",
+            "link": "pdfedit",
+            "img": "res/pdfedit.png",
+            "languages": ["Java"],
+            "tags": [],
+            "year": 2017
+        },
+        {
+            "name": "WebGL",
+            "link": "webgl/index.html",
+            "img": "res/webgl.png",
+            "languages": ["JS"],
+            "tags": [],
+            "year": 2015
+        },
+        {
+            "name": "English Parser",
+            "link": "wordproject",
+            "img": "res/wordproject.png",
+            "languages": ["JS"],
+            "tags": [],
+            "year": 2015
+        },
+        {
+            "name": "Journey",
+            "link": "journey",
+            "img": "res/journey.png",
+            "languages": ["Java"],
+            "tags": ["Game"],
+            "year": 2017
+        },
+        {
+            "name": "Forest Escape",
+            "link": "forestescape",
+            "img": "res/forestescape.png",
+            "languages": ["Java"],
+            "tags": ["Game"],
+            "year": 2016
+        },
+        {
+            "name": "Stay Woke",
+            "link": "staywoke",
+            "img": "res/staywoke.png",
+            "tags": ["Game"],
+            "year": 2016
+        },
+        {
+            "name": "Minecraft Clone",
+            "link": "blockrush",
+            "img": "res/blockrush.png",
+            "languages": ["JS"],
+            "tags": ["Game"],
+            "year": 2014
+        },
+        {
+            "name": "Tower Defense",
+            "link": "cannonrush",
+            "img": "res/cannonrush.png",
+            "languages": ["JS"],
+            "tags": ["Game"],
+            "year": 2014
+        },
+        {
+            "name": "Project Red",
+            "link": "projectred",
+            "img": "res/projectred.png",
+            "languages": ["JS"],
+            "tags": ["Game"],
+            "year": 2016
+        }
+    ];
+
+    let container = document.getElementById("projects");
+    let row, col;
+    for(let i = 0; i < projects.length; i++) {
+        let p = projects[i];
+        if(i % 5 === 0) {
+            row = document.createElement("div");
+            row.className = "row row-color";
+            col = document.createElement("div");
+            col.className = "col-sm-12";
+            row.appendChild(col);
+            container.appendChild(row);
+        }
+
+        let tags = " [";
+        for(let j = 0; j < p.tags.length; j++) {
+            tags += p.tags[j];
+        }
+        tags += "]";
+        if(tags === " []") tags = "";
+
+        col.innerHTML += "<a href='" + p.link + "'>" +
+                        "<div class='square'>" +
+                        "<img src='" + p.img + "' class='preview' alt=''/>" +
+                        "<p class='title'>" + p.name + tags + "</p>" +
+                        "</div>" +
+                        "</a>";
+    }
+</script>
 </body>
 </html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>The Blueprint Engine</title>
+    <link rel="shortcut icon" type="image/png" href="favicon.ico"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <div class="page-header">
+        <h1><span class="color highlight">The Blueprint</span> Engine</h1>
+        <h5>Dalton Turner</h5>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <h3>Overview</h3>
+        </div>
+        <div class="col-sm-6 col-xs-12">
+            <p></p>
+        </div>
+        <div class="ide-container col-sm-6 col-xs-12">
+            <img src="" alt=""/>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12">
+            <h3>Entity Component System</h3>
+        </div>
+        <div class="col-sm-6  col-xs-12">
+            <p>
+                The engine handles four types of entities. Statics which are used for world building and cannot move. Mobs
+                which are mobile entities able to move, have AI and interact with the world. Items which are able to be
+                picked up and equipped by mobs. Finally vehicles which can be interacted with and driven by mobs.
+            </p>
+            <p>
+                Each entity is defined in an external JSON file with a name, dimensions, and a customizable list of
+                components. The components available range from base entity stats like attack and defense to physics properties
+                to AI behaviors. An entity component system reduces hard-coding in the engine and organizes things that need
+                to be easily changed to external scripts and JSON files.
+            </p>
+        </div>
+        <div class="ide-container col-sm-6  col-xs-12">
+            <img src="res/entities.png" alt=""/>
+            <img src="res/ecs.png" alt=""/>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12">
+            <h3>Artificial Intelligence</h3>
+        </div>
+        <div class="col-sm-6  col-xs-12">
+            <p></p>
+        </div>
+        <div class="ide-container col-sm-6  col-xs-12">
+            <img src="res/breakdown.png" alt=""/>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12">
+            <h3>Event Handling</h3>
+        </div>
+        <div class="col-sm-6  col-xs-12">
+            <p>
+
+            </p>
+        </div>
+        <div class="ide-container col-sm-6  col-xs-12">
+            <img src="res/method.png" alt=""/>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12">
+            <h3>Quest System/Scripting</h3>
+        </div>
+        <div class="col-sm-6  col-xs-12">
+            <p>
+
+            </p>
+        </div>
+        <div class="ide-container col-sm-6  col-xs-12">
+            <img src="res/operator.png" alt=""/>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12">
+            <h3>Animation</h3>
+        </div>
+        <div class="col-sm-6  col-xs-12">
+            <p></p>
+        </div>
+        <div class="ide-container col-sm-6  col-xs-12">
+            <img src="res/breakdown.png" alt=""/>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12">
+            <h3>User Interface</h3>
+        </div>
+        <div class="col-sm-6  col-xs-12">
+            <p>
+
+            </p>
+        </div>
+        <div class="ide-container col-sm-6  col-xs-12">
+            <img src="res/compiler.png" alt=""/>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12">
+            <h3>Dynamically Sized Worlds</h3>
+        </div>
+        <div class="col-sm-6  col-xs-12">
+            <p>
+
+            </p>
+        </div>
+        <div class="ide-container col-sm-6  col-xs-12">
+            <img src="res/compiler.png" alt=""/>
+        </div>
+    </div>
+
+    <div class="row buttons">
+        <a href="axil.jar" download style="display: inline; padding: 0; margin: 0;"><button type="submit" class="btn">Download</button></a>
+        <a href="https://github.com/dcturner5/AxilScript" style="display: inline; padding: 0; margin: 0;"><button type="submit" class="btn">Github</button></a>
+    </div>
+</div>
+</body>
+</html>

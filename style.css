@@ -29,7 +29,7 @@ div.page-header {
 }
 div.square {
     background-color: #ff8c00;
-    border-radius: 10px;
+    /*border-radius: 10px;*/
     display: inline-block;
     margin-right: 8px;
     overflow: hidden;
@@ -82,7 +82,7 @@ div.about p {
 
 div.row-color {
     background-color : #444444;
-    border-radius: 10px;
+    /*border-radius: 10px;*/
 }
 
 div.row-gap {

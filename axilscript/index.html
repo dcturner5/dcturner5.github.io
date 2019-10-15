@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AxilScript</title>
+    <link rel="shortcut icon" type="image/png" href="favicon.ico"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <div class="page-header">
+        <h1><span class="color highlight">Axil</span>Script</h1>
+        <h5>Dalton Turner</h5>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <h3>Overview</h3>
+        </div>
+        <div class="col-sm-6 col-xs-12">
+            <p>The purpose of this scripting language is to have two way communication between a script and the Java runtime
+                environment without having to hardcode the scripts in Java. An example would be having externally written scripts
+                working with a Java game engine to do basic commands like moving a character or changing world lighting.
+            </p>
+        </div>
+        <div class="ide-container col-sm-6 col-xs-12">
+            <img src="res/diagram.png" alt=""/>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12">
+            <h3>Binary File</h3>
+        </div>
+        <div class="col-sm-6  col-xs-12">
+            <p>This hexadecimal code can be better represented as a list of integers. The first section of integers
+                contain the initial memory data needed to run the instructions. The second section is dedicated to the
+                actual instructions.
+            </p>
+        </div>
+        <div class="ide-container col-sm-6  col-xs-12">
+            <img src="res/binary.png" alt=""/>
+            <img src="res/instructions.png" alt=""/>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12">
+            <h3>Instruction Formatting</h3>
+        </div>
+        <div class="col-sm-6  col-xs-12">
+            <h4>Constant Format</h4>
+            <p>[constant code] + [memory address] + [data type] + [data value]</p><br>
+            <h4>Function Format</h4>
+            <p>[function code] + [function name] + [address] + [return address] + ...[parameter memory address]... + [stop code]</p><br>
+            <h4>Instruction Format</h4>
+            <p>[method code] + ...[parameter memory address]... + [result memory address]</p>
+        </div>
+        <div class="ide-container col-sm-6  col-xs-12">
+            <img src="res/breakdown.png" alt=""/>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12">
+            <h3>Methods</h3>
+        </div>
+        <div class="col-sm-6  col-xs-12">
+            <p>
+                The word method refers to any method or function written in java. Function refers to the same concept
+                written in AxilScript. Custom methods can be added to the AxilMethodMap by specifying the method name,
+                the number of parameters and the java code performing the methods intended purpose. The java code takes
+                in the args integer array as parameters with the last element in that array being reserved for the memory
+                address location the method returns its value to. The memory object is used to access any data with the
+                memory addresses provided in the args array. The data types of the parameters provided is ignored by the
+                compiler and must be handled here (as seen in the if statements below). The return value of the java code
+                is used as a goto by the Axil runtime to "jump" to the instruction specified. If this functionality is not
+                needed, return -1. Here is an example of the add method.
+            </p>
+        </div>
+        <div class="ide-container col-sm-6  col-xs-12">
+            <img src="res/method.png" alt=""/>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12">
+            <h3>Operators</h3>
+        </div>
+        <div class="col-sm-6  col-xs-12">
+            <p>
+                New operators can be added through the AxilOperatorMap by specifying the symbol, method name, priority
+                (based on the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence#Table">
+                JavaScript Operator Precedence</a>) and number of parameters. This is an example of the "+"
+                operator being linked to the "add" method.
+            </p>
+        </div>
+        <div class="ide-container col-sm-6  col-xs-12">
+            <img src="res/operator.png" alt=""/>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12">
+            <h3>Compiler</h3>
+        </div>
+        <div class="col-sm-6  col-xs-12">
+            <p>
+                This diagram shows the compiling process. Text files are read and sanitized of all whitespace. Next, the
+                file is split into multiple strings representing lines or statements (functions, if, import and while).
+                Each line is compiled into an integer array presenting instructions and then added on to the rest of the
+                program’s instruction array. The constants and functions of the program are cached by the compiler during
+                this process and saved as a header in the final export file.
+            </p>
+        </div>
+        <div class="ide-container col-sm-6  col-xs-12">
+            <img src="res/compiler.png" alt=""/>
+        </div>
+    </div>
+
+    <div class="row buttons">
+        <a href="axil.jar" download style="display: inline; padding: 0; margin: 0;"><button type="submit" class="btn btn-primary btn-lg">Download</button></a>
+        <a href="https://github.com/dcturner5/AxilScript" style="display: inline; padding: 0; margin: 0;"><button type="submit" class="btn btn-primary btn-lg">Github</button></a>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+body {
+   /* background-color: #444;*/
+    /*text-align: center;*/
+}
+div.ide {
+    display: inline-block;
+    padding: 8px;
+}
+div.ide div {
+    position: relative;
+    height: 64px;
+}
+
+div.container {
+    color: black;
+}
+
+p {
+    font-size: 13pt;
+}
+
+span.highlight {
+    font-weight: bold;
+}
+
+span.color {
+    color: #fa9200;
+}
+
+h3 {
+    color: #fa9200;
+    font-weight: bold;
+}
+
+div.buttons {
+    text-align: center;
+    padding: 2.5%;
+}
+
+button.btn {
+    color: black;
+    margin: 1%;
+    width: 10%;
+}
+
+img {
+    width: 100%;
+}
