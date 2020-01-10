@@ -3,13 +3,13 @@
 <head>
     <title>ChuScript</title>
     <link rel="shortcut icon" type="image/png" href="favicon.ico"/>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../lib/bootstrap-4.4.1-dist/css/bootstrap.min.css">
 	<link rel="stylesheet" href="style.css?1">
 	<script src="ChuScript.js?1"></script>
 </head>
 <body onload="main()">
 	<div class="container">
-        <div class="page-header">
+        <div class="pb-2 mt-4 mb-2 border-bottom">
             <h1><span class="color highlight">Chu</span>Script</h1>
             <h5>Dalton Turner</h5>
         </div>
@@ -149,13 +149,13 @@ max=10;fibonacci(1,0,max,0);functionfibonacci(x,y,max,i){z=x+y;printz;if(i<max-1
             </div>
         </div>
 
-        <div class="row buttons">
-            <a href="ChuScript.js" download style="display: inline; padding: 0; margin: 0;"><button type="submit" class="btn">Download</button></a>
-            <a href="https://github.com/turner-dalton-wm/ChuScript" style="display: inline; padding: 0; margin: 0;"><button type="submit" class="btn">Github</button></a>
+        <div class="text-center p-3">
+            <a class="btn btn-primary btn-lg" href="ChuScript.js" download>Download</a>
+            <a class="btn btn-primary btn-lg" href="https://github.com/turner-dalton-wm/ChuScript">Github</a>
         </div>
     </div>
 	<script>
-		var engines = [];
+		let engines = [];
 		function main() {
             var inputs = document.getElementsByClassName("input");
             var outputs = document.getElementsByClassName("output");
@@ -167,10 +167,6 @@ max=10;fibonacci(1,0,max,0);functionfibonacci(x,y,max,i){z=x+y;printz;if(i<max-1
                 engines.push(engine);
             }
 		}
-	</script>
-	<script>
-
-
 	</script>
 </body>
 </html>

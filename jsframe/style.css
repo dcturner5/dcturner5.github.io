@@ -1,15 +1,6 @@
-body {
-    background-color: #444;
-    /*text-align: center;*/
-}
-
-div.container {
-    color: white;
-}
-
-div.row {
-    background-color: #555;
-    margin: 2% 0 2% 0;
+h3 {
+    color: #00aaff;
+    font-weight: bold;
 }
 
 p {
@@ -22,24 +13,4 @@ span.highlight {
 
 span.color {
     color: #00aaff;
-}
-
-h3 {
-    color: #00aaff;
-    font-weight: bold;
-}
-
-div.buttons {
-    text-align: center;
-    padding: 2.5%;
-}
-
-button.btn {
-    color: black;
-    margin: 1%;
-    width: 10%;
-}
-
-div.column {
-    border-right: 8px solid #444;
 }

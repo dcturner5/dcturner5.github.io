@@ -1,20 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
     <title>WebGL</title>
-    <style>
-        body {
-            color: #aaaaaa;
-            background-color: #333333;
-            text-align: center;
-        }
-    </style>
+
+    <link rel="stylesheet" href="../lib/bootstrap-4.4.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<h3>WebGL Mesh</h3>
-<canvas id="glcanvas" width="800" height="480" style="width: 70%; background-color:#557DA8;"></canvas>
-<p>W: Forward, S: Backward, Q: Turn Left, E: Turn Right, Space: Jump</p>
+<div class="container">
+    <div class="pb-2 mt-4 mb-2 border-bottom">
+        <h1><span class="color highlight">WebGL</span>Mesh</h1>
+        <h5>Dalton Turner</h5>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6 col-xs-12">
+            <h3>Overview</h3>
+            <p>This a showcase of <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL: a
+                JavaScript API designed by Mozilla</a> to allow for GPU-accelerated graphics in a web browser. I
+                generated a simple mesh with random color and height values and then rendered it using WebGL and
+                my own shaders. I then implemented a 3D camera to manipulate the view matrix so
+                the user can move around and rotate.</p>
+        </div>
+        <div class="col-sm-6 col-xs-12">
+            <h3>Controls</h3>
+            <p>W: Forward, S: Backward, Q: Turn Left, E: Turn Right, Space: Jump</p>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <h3>Demo</h3>
+            <canvas id="glcanvas" width="1280" height="720" style="width: 100%; background-color:#557DA8;"></canvas>
+        </div>
+    </div>
+</div>
+
 <script id="vertex" type="vertex-shader">
 	precision mediump float;
 
@@ -32,7 +55,6 @@
       v_color = a_color;
     }
 </script>
-
 <script id="fragment" type="fragment-shader">
 	precision mediump float;
 
@@ -42,9 +64,8 @@
 		gl_FragColor = v_color;
     }
 </script>
-
-<script type="application/javascript" src="js/gl-matrix.js"></script>
-<script type="application/javascript" src="js/app.js"></script>
+<script src="js/gl-matrix.js"></script>
+<script src="js/app.js"></script>
 <script>
     var engine = new Engine('glcanvas');
     engine.initShader('fragment', 'vertex');

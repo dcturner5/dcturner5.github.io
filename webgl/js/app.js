@@ -314,9 +314,9 @@ function Mesh(engine, scale) {
                 vertices.push((Math.random() - .5) / invfreq);
                 vertices.push(j);
 
-                colors.push(Math.min(Math.random(), .12));
-                colors.push(Math.min(Math.random() / 1 + .4, .8));
-                colors.push(Math.min(Math.random(), .12));
+                colors.push(Math.min(Math.random(), .5));
+                colors.push(Math.min(Math.random() / 2 + .4, .8));
+                colors.push(Math.min(Math.random(), .5));
                 colors.push(1.0);
             }
         }

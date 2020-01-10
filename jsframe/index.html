@@ -2,13 +2,15 @@
 <html>
 <head>
     <title>JsFrame</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="../lib/bootstrap-4.4.1-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
+
     <script src="JsFrame.js"></script>
 </head>
-<body onload="main()">
+<body>
 <div class="container">
-    <div class="page-header">
+    <div class="pb-2 mt-4 mb-2 border-bottom">
         <h1><span class="color highlight">Js</span>Frame</h1>
         <h5>Dalton Turner</h5>
     </div>
@@ -16,35 +18,27 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-sm-6 column">
-            <div>
-                <h3>Overview</h3>
-            </div>
-            <div>
-                <p>JSFrame is a javascript plugin that allows for custom pop-up frames.</p>
-                <p>The frames are draggable by clicking on the top header of the frame and can be closed by clicking the X button
-                    in the corner.</p>
-                <p>Simply create a div with the class of "JsFrame" and set parameters using the HTML "data-" attributes.</p>
-            </div>
+        <div class="col-sm-6">
+            <h3>Overview</h3>
+            <p>JSFrame is a javascript plugin that allows for custom pop-up frames.</p>
+            <p>The frames are draggable by clicking on the top header of the frame and can be closed by clicking the X button
+                in the corner.</p>
+            <p>Simply create a div with the class of "JsFrame" and set parameters using the HTML "data-" attributes.</p>
         </div>
         <div class="col-sm-6">
-            <div>
-                <h3>Demo</h3>
-            </div>
-            <div>
-                <button onclick="addFrame()" class="btn" style="width: 20%;">Add JsFrame</button>
-            </div>
+            <h3>Demo</h3>
+            <button onclick="addFrame()" class="btn btn-primary btn-lg">Add JsFrame</button>
         </div>
     </div>
 
-    <div class="row buttons">
-        <a href="JsFrame.js" download style="display: inline; padding: 0; margin: 0;"><button type="submit" class="btn">Download</button></a>
-        <a href="https://github.com/turner-dalton-wm/" style="display: inline; padding: 0; margin: 0;"><button type="submit" class="btn">Github</button></a>
+    <div class="text-center p-3">
+        <a class="btn btn-primary btn-lg" href="JsFrame.js" download>Download</a>
+        <a class="btn btn-primary btn-lg" href="https://github.com/dcturner5">Github</a>
     </div>
 </div>
 <script>
     function addFrame() {
-        document.body.innerHTML += '<div class="JsFrame" data-title="Test JsFrame" data-y="400" data-color="black" data-resizable="both"><h1>Hello World</h1></div>';
+        document.body.innerHTML += '<div class="JsFrame" data-title="Test JsFrame" data-y="200" data-color="#ddd" data-resizable="both"><h1>Hello World</h1></div>';
         JsFrame.update();
     }
 </script>

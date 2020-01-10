@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style_1.css">
+</head>
+<body>
+<div class="container">
+    <div class="page-header">
+        <h1>Portfolio</h1>
+        <h5>Dalton Turner</h5>
+    </div>
+</div>
+<div class="container">
+    <div class="row row-color row-gap">
+        <div class="col-sm-12">
+            <h2 class="section-title">About Me</h2>
+        </div>
+        <div class="col-sm-8 about">
+            <p>I’m a student in my sixth semester at ASU's Barrett Honors College studying Computer Science. The majority of my three years of programming experience are in Java, website development, and backend servers.</p>
+            <p>While programming in Java, I have built various projects from scratch such as calculators, multiple games and game engines, and GUI editors. I have also
+                touched on Android app development using the programs Eclipse and Android Studio.</p>
+            <p>In website development, most of my projects have been javascript-heavy, frontend, single page sites or full backend web applications. I am familiar
+                with both the MEAN and XAMP stacks. I have also used NodeJS in conjunction with APIs to create Reddit, Slack, and Twitter bots.</p>
+            <br>
+            <div>
+                <p>Contact Info:</p>
+                Email: <a href="mailto:dcturner555@gmail.com">dcturner555@gmail.com</a><br>
+                LinkedIn: <a href="https://www.linkedin.com/in/dalton-t-89048011b/">Click Here</a><br>
+                Github: <a href="https://github.com/dcturner5">Click Here</a>
+            </div>
+        </div>
+        <div class="col-sm-4 picture">
+            <img src="res/profile.png" class="profile"/>
+        </div>
+    </div>
+</div>
+<div id="projects" class="container"></div>
+<script>
+    let projects = [
+        {
+            "name": "Blueprint Engine",
+            "link": "blueprint/index.html",
+            "img": "",
+            "languages": ["Java"],
+            "tags": ["Engine"],
+            "year": 2018
+        },
+        /*{
+            "name": "Lyric Bot"
+        },*/
+        {
+            "name": "AxilScript",
+            "link": "axilscript",
+            "img": "res/axilscript.png",
+            "languages": ["Java"],
+            "tags": ["Language"],
+            "year": 2018
+        },
+        {
+            "name": "ChuScript",
+            "link": "chuscript",
+            "img": "res/chuscript.png",
+            "languages": ["JS"],
+            "tags": ["Language"],
+            "year": 2017
+        },
+        {
+            "name": "JSFrame",
+            "link": "jsframe",
+            "img": "res/jsframe.png",
+            "languages": ["JS"],
+            "tags": ["Library"],
+            "year": 2016
+        },
+        {
+            "name": "PDF Edit",
+            "link": "pdfedit",
+            "img": "res/pdfedit.png",
+            "languages": ["Java"],
+            "tags": [],
+            "year": 2017
+        },
+        {
+            "name": "WebGL",
+            "link": "webgl/index.html",
+            "img": "res/webgl.png",
+            "languages": ["JS"],
+            "tags": [],
+            "year": 2015
+        },
+        {
+            "name": "English Parser",
+            "link": "wordproject",
+            "img": "res/wordproject.png",
+            "languages": ["JS"],
+            "tags": [],
+            "year": 2015
+        },
+        {
+            "name": "Journey",
+            "link": "journey",
+            "img": "res/journey.png",
+            "languages": ["Java"],
+            "tags": ["Game"],
+            "year": 2017
+        },
+        {
+            "name": "Forest Escape",
+            "link": "forestescape",
+            "img": "res/forestescape.png",
+            "languages": ["Java"],
+            "tags": ["Game"],
+            "year": 2016
+        },
+        {
+            "name": "Stay Woke",
+            "link": "staywoke",
+            "img": "res/staywoke.png",
+            "tags": ["Game"],
+            "year": 2016
+        },
+        {
+            "name": "Minecraft Clone",
+            "link": "blockrush",
+            "img": "res/blockrush.png",
+            "languages": ["JS"],
+            "tags": ["Game"],
+            "year": 2014
+        },
+        {
+            "name": "Tower Defense",
+            "link": "cannonrush",
+            "img": "res/cannonrush.png",
+            "languages": ["JS"],
+            "tags": ["Game"],
+            "year": 2014
+        },
+        {
+            "name": "Project Red",
+            "link": "projectred",
+            "img": "res/projectred.png",
+            "languages": ["JS"],
+            "tags": ["Game"],
+            "year": 2016
+        }
+    ];
+
+    let container = document.getElementById("projects");
+    let row, col;
+    for(let i = 0; i < projects.length; i++) {
+        let p = projects[i];
+        if(i % 5 === 0) {
+            row = document.createElement("div");
+            row.className = "row row-color";
+            col = document.createElement("div");
+            col.className = "col-sm-12";
+            row.appendChild(col);
+            container.appendChild(row);
+        }
+
+        let tags = " [";
+        for(let j = 0; j < p.tags.length; j++) {
+            tags += p.tags[j];
+        }
+        tags += "]";
+        if(tags === " []") tags = "";
+
+        col.innerHTML += "<a href='" + p.link + "'>" +
+                        "<div class='square'>" +
+                        "<img src='" + p.img + "' class='preview' alt=''/>" +
+                        "<p class='title'>" + p.name + tags + "</p>" +
+                        "</div>" +
+                        "</a>";
+    }
+</script>
+</body>
+</html>

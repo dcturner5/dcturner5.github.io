@@ -1,52 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Dalton Turner's Portfolio</title>
+
+    <link rel="stylesheet" href="lib/bootstrap-4.4.1-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
-    <script type="text/javascript" src="projects.json"></script>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="lib/bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
 </head>
 <body>
-<div class="container">
-    <div class="page-header">
-        <h1>Portfolio</h1>
-        <h5>Dalton Turner</h5>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+        <h1 class="font-weight-light text-white">Project Portfolio</h1>
     </div>
-</div>
+</nav>
+
 <div class="container">
-    <div class="row row-color row-gap">
-        <div class="col-sm-12">
-            <h2 class="section-title">About Me</h2>
+    <div class="row my-5">
+        <div class="col-sm-9">
+            <h3 class="font-weight-light">Dalton Turner</h3>
+            <p>
+                I am currently a junior at ASU's Barrett Honors College majoring in Computer Science. My professional and
+                academic programming experience includes Big Data visualization, MySQL and MongoDB Database Management
+                and RESTful API development. I currently work as an undergraduate research assistant with
+                <a href="http://aria.asu.edu/candan/">Dr. Candan</a> at EMITLab, where I develop the front-end
+                visualization and API for <a href="http://www.vldb.org/pvldb/vol11/p1906-behrens.pdf">DataStorm</a>,
+                a natural disaster simulator.
+            </p>
         </div>
-        <div class="col-sm-8 about">
-            <p>I’m a student in my third semester at ASU's Barrett Honors College studying Computer Science. The majority of my three years of programming experience are in Java, website development, and backend servers.</p>
-            <p>While programming in Java, I have built various projects from scratch such as calculators, multiple games and game engines, and GUI editors. I have also
-                touched on Android app development using the programs Eclipse and Android Studio.</p>
-            <p>In website development, most of my projects have been javascript-heavy, frontend, single page sites or full backend web applications. I am familiar
-                with both the MEAN and XAMP stacks. I have also used NodeJS in conjunction with APIs to create Reddit, Slack, and Twitter bots.</p>
-            <br>
-            <div>
-                <p>Contact Info:</p>
-                Email: <a href="mailto:dcturner555@gmail.com">dcturner555@gmail.com</a><br>
-                LinkedIn: <a href="https://www.linkedin.com/in/dalton-t-89048011b/">Click Here</a><br>
-                Github: <a href="https://github.com/dcturner5">Click Here</a>
-            </div>
-        </div>
-        <div class="col-sm-4 picture">
-            <img src="res/profile.png" class="profile"/>
+        <div class="col-sm-3">
+            <img class="img-fluid rounded mb-4 mb-lg-0" src="res/profile.png" alt="">
         </div>
     </div>
 </div>
-<div id="projects" class="container"></div>
+<div id="projects" class="container">
+    <h3 class="font-weight-light">Projects</h3>
+</div>
 <script>
     let projects = [
         {
             "name": "Blueprint Engine",
-            "link": "blueprint/index.html",
-            "img": "",
+            "link": "blueprint",
+            "img": "res/blueprint.png",
             "languages": ["Java"],
-            "tags": ["Engine"],
+            "tags": ["Game Engine"],
             "year": 2018
         },
         /*{
@@ -64,7 +66,7 @@
             "name": "ChuScript",
             "link": "chuscript",
             "img": "res/chuscript.png",
-            "languages": ["JS"],
+            "languages": ["JavaScript"],
             "tags": ["Language"],
             "year": 2017
         },
@@ -72,8 +74,8 @@
             "name": "JSFrame",
             "link": "jsframe",
             "img": "res/jsframe.png",
-            "languages": ["JS"],
-            "tags": ["Library"],
+            "languages": ["JavaScript"],
+            "tags": ["Web Library"],
             "year": 2016
         },
         {
@@ -81,23 +83,23 @@
             "link": "pdfedit",
             "img": "res/pdfedit.png",
             "languages": ["Java"],
-            "tags": [],
+            "tags": ["Tool"],
             "year": 2017
         },
         {
             "name": "WebGL",
-            "link": "webgl/index.html",
+            "link": "webgl",
             "img": "res/webgl.png",
-            "languages": ["JS"],
-            "tags": [],
+            "languages": ["JavaScript"],
+            "tags": ["Demo"],
             "year": 2015
         },
         {
             "name": "English Parser",
             "link": "wordproject",
             "img": "res/wordproject.png",
-            "languages": ["JS"],
-            "tags": [],
+            "languages": ["JavaScript"],
+            "tags": ["Demo"],
             "year": 2015
         },
         {
@@ -120,61 +122,69 @@
             "name": "Stay Woke",
             "link": "staywoke",
             "img": "res/staywoke.png",
+            "languages": ["JavaScript"],
             "tags": ["Game"],
             "year": 2016
-        },
-        {
-            "name": "Minecraft Clone",
-            "link": "blockrush",
-            "img": "res/blockrush.png",
-            "languages": ["JS"],
-            "tags": ["Game"],
-            "year": 2014
         },
         {
             "name": "Tower Defense",
             "link": "cannonrush",
             "img": "res/cannonrush.png",
-            "languages": ["JS"],
+            "languages": ["JavaScript"],
             "tags": ["Game"],
             "year": 2014
         },
         {
-            "name": "Project Red",
+            "name": "Minecraft Clone",
+            "link": "blockrush",
+            "img": "res/blockrush.png",
+            "languages": ["JavaScript"],
+            "tags": ["Game"],
+            "year": 2014
+        },
+        {
+            "name": "Pokemon Clone",
             "link": "projectred",
             "img": "res/projectred.png",
-            "languages": ["JS"],
+            "languages": ["JavaScript"],
             "tags": ["Game"],
             "year": 2016
         }
     ];
 
     let container = document.getElementById("projects");
-    let row, col;
+    let row;
     for(let i = 0; i < projects.length; i++) {
         let p = projects[i];
-        if(i % 5 === 0) {
+        if(i % 6 === 0) {
             row = document.createElement("div");
             row.className = "row row-color";
-            col = document.createElement("div");
-            col.className = "col-sm-12";
-            row.appendChild(col);
             container.appendChild(row);
         }
 
-        let tags = " [";
+        let langs = "";
         for(let j = 0; j < p.tags.length; j++) {
-            tags += p.tags[j];
+            let type = "badge-secondary";
+            if(p.languages[j] === "Java") type = "badge-danger";
+            if(p.languages[j] === "JavaScript") type = "badge-info";
+            langs += "<span class=\"badge " + type + "\">" + p.languages[j] + "</span>&nbsp;";
         }
-        tags += "]";
-        if(tags === " []") tags = "";
 
-        col.innerHTML += "<a href='" + p.link + "'>" +
-                        "<div class='square'>" +
-                        "<img src='" + p.img + "' class='preview' alt=''/>" +
-                        "<p class='title'>" + p.name + tags + "</p>" +
-                        "</div>" +
-                        "</a>";
+        let tags = "";
+        for(let j = 0; j < p.tags.length; j++) {
+            let type = "badge-secondary";
+            tags += "<span class=\"badge " + type + "\">" + p.tags[j] + "</span>&nbsp;";
+        }
+
+        row.innerHTML += "<div class=\"col-md-2\">" +
+                            "<div class=\"item-preview mb-5\">" +
+                                "<a class=\"item-preview-img box-shadow0lg d-block mb-3\" href=\"" + p.link + "\">" +
+                                "<img class=\"lazy img-fluid\" src=\"" + p.img + "\" style/>" +
+                                "</a>\n" +
+                                "<div class=\"item-preview-title\">" + p.name + "</div>" +
+                                "<div class=\"item-preview-description\">" +  langs + tags + "</div>" +
+                            "</div>" +
+                        "</div>";
     }
 </script>
 </body>

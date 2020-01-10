@@ -1,44 +1,9 @@
-body {
-    background-color: #444;
-    /*text-align: center;*/
-}
-
-div.container {
-    color: white;
-}
-
-div.row {
-    background-color: #555;
-    margin: 2% 0 2% 0;
-    padding-bottom: 1%;
-}
-
-p {
-    font-size: large;
-}
-
 span.highlight {
     font-weight: bold;
 }
 
 span.color {
     color: #ff0a0a;
-}
-
-h3 {
-    color: #2e9b00;
-    font-weight: bold;
-}
-
-div.buttons {
-    text-align: center;
-    padding: 2.5%;
-}
-
-button.btn {
-    color: black;
-    margin: 1%;
-    width: 10%;
 }
 
 div.img-overview {
