@@ -2,97 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1574fcde-5cb2-4b44-9f8e-6e4185e9f070" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/projectred/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blockrush/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blockrush/.idea/BlockRush.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blockrush/.idea/copyright/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blockrush/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blockrush/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blockrush/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blockrush/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blockrush/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/minecraft/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blockrush/js/astar.js" beforeDir="false" afterPath="$PROJECT_DIR$/minecraft/js/astar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blockrush/js/calc.js" beforeDir="false" afterPath="$PROJECT_DIR$/minecraft/js/calc.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blockrush/js/dir.js" beforeDir="false" afterPath="$PROJECT_DIR$/minecraft/js/dir.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blockrush/js/game.js" beforeDir="false" afterPath="$PROJECT_DIR$/minecraft/js/game.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blockrush/js/gui.js" beforeDir="false" afterPath="$PROJECT_DIR$/minecraft/js/gui.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blockrush/js/map.js" beforeDir="false" afterPath="$PROJECT_DIR$/minecraft/js/map.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blockrush/js/phys.js" beforeDir="false" afterPath="$PROJECT_DIR$/minecraft/js/phys.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blockrush/js/red.js" beforeDir="false" afterPath="$PROJECT_DIR$/minecraft/js/red.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blockrush/res/entities/playerspritesheet.png" beforeDir="false" afterPath="$PROJECT_DIR$/minecraft/res/entities/playerspritesheet.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blockrush/res/entities/zombiespritesheet.png" beforeDir="false" afterPath="$PROJECT_DIR$/minecraft/res/entities/zombiespritesheet.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blockrush/res/gui/playerbar.png" beforeDir="false" afterPath="$PROJECT_DIR$/minecraft/res/gui/playerbar.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blockrush/res/gui/playercraft2.png" beforeDir="false" afterPath="$PROJECT_DIR$/minecraft/res/gui/playercraft2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blockrush/res/gui/playercraft3.png" beforeDir="false" afterPath="$PROJECT_DIR$/minecraft/res/gui/playercraft3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blockrush/res/gui/playerfurnace.png" beforeDir="false" afterPath="$PROJECT_DIR$/minecraft/res/gui/playerfurnace.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blockrush/res/gui/playerinv.png" beforeDir="false" afterPath="$PROJECT_DIR$/minecraft/res/gui/playerinv.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blockrush/res/tiles/breakani.png" beforeDir="false" afterPath="$PROJECT_DIR$/minecraft/res/tiles/breakani.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blockrush/res/tiles/itemspritesheet.png" beforeDir="false" afterPath="$PROJECT_DIR$/minecraft/res/tiles/itemspritesheet.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blockrush/res/tiles/redspritesheet.png" beforeDir="false" afterPath="$PROJECT_DIR$/minecraft/res/tiles/redspritesheet.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blockrush/res/tiles/spritesheet.png" beforeDir="false" afterPath="$PROJECT_DIR$/minecraft/res/tiles/spritesheet.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blueprint/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/blueprint/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/journey/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/journey/.idea/journey.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/journey/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/journey/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/journey/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/journey/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/journey/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/journey/res/climbingsystem.png" beforeDir="false" afterPath="$PROJECT_DIR$/journey/res/climbingsystem.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/journey/res/enemycombat.png" beforeDir="false" afterPath="$PROJECT_DIR$/journey/res/enemycombat.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/journey/res/heartgain.png" beforeDir="false" afterPath="$PROJECT_DIR$/journey/res/heartgain.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/journey/res/leveldesignslide.png" beforeDir="false" afterPath="$PROJECT_DIR$/journey/res/leveldesignslide.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/journey/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/journey/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jsframe/.idea/JsFrame.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jsframe/.idea/copyright/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jsframe/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jsframe/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jsframe/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jsframe/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jsframe/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/jsframe/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projectred/css/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projectred/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/projectred/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/blockrush.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/profile.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/profile.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/projectred.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/projectred.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staywoke/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/staywoke/.idea/StayWoke.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/staywoke/.idea/copyright/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/staywoke/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/staywoke/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/staywoke/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/staywoke/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/staywoke/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/staywoke/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/staywoke/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staywoke/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/staywoke/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staywoke/js/Game.js" beforeDir="false" afterPath="$PROJECT_DIR$/staywoke/js/Game.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staywoke/js/engine/Engine.js" beforeDir="false" afterPath="$PROJECT_DIR$/staywoke/js/engine/Engine.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/towerdefense/res/entities/enemySprite.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/towerdefense/res/entities/helpIcon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/towerdefense/res/entities/playerSprite.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/towerdefense/res/entities/zombiespritesheet.png" beforeDir="false" afterPath="$PROJECT_DIR$/towerdefense/res/entities/zombiespritesheet.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/towerdefense/res/gui/mortarSprite.png" beforeDir="false" afterPath="$PROJECT_DIR$/towerdefense/res/gui/mortarSprite.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/towerdefense/res/gui/sButtonIcon.png" beforeDir="false" afterPath="$PROJECT_DIR$/towerdefense/res/gui/sButtonIcon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/towerdefense/res/gui/shopGUI.png" beforeDir="false" afterPath="$PROJECT_DIR$/towerdefense/res/gui/shopGUI.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/towerdefense/res/gui/shopIcon.png" beforeDir="false" afterPath="$PROJECT_DIR$/towerdefense/res/gui/shopIcon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webgl/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webgl/.idea/3D.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webgl/.idea/copyright/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webgl/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webgl/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webgl/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webgl/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wordproject/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wordproject/.idea/WordProject.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wordproject/.idea/copyright/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wordproject/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wordproject/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wordproject/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wordproject/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wordproject/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/englishparser/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wordproject/js/Verb.js" beforeDir="false" afterPath="$PROJECT_DIR$/englishparser/js/Verb.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wordproject/js/Word.js" beforeDir="false" afterPath="$PROJECT_DIR$/englishparser/js/Word.js" afterDir="false" />
     </list>
     <ignored path="PortfolioWebsite.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -114,8 +24,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="31" column="45" selection-start-line="31" selection-start-column="45" selection-end-line="31" selection-end-column="45" />
+            <state relative-caret-position="374">
+              <caret line="34" column="43" selection-start-line="34" selection-start-column="43" selection-end-line="34" selection-end-column="43" />
               <folding>
                 <element signature="e#30#36#1" expanded="true" />
                 <element signature="e#30#36#1" expanded="true" />
@@ -314,12 +224,12 @@
       <workItem from="1570999515872" duration="15856000" />
       <workItem from="1571205944787" duration="112000" />
       <workItem from="1578260259125" duration="11899000" />
-      <workItem from="1578625491180" duration="18588000" />
+      <workItem from="1578625491180" duration="19907000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48875000" />
+    <option name="totallyTimeSpent" value="50194000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1933" height="1053" extended-state="6" />
@@ -678,8 +588,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="31" column="45" selection-start-line="31" selection-start-column="45" selection-end-line="31" selection-end-column="45" />
+        <state relative-caret-position="374">
+          <caret line="34" column="43" selection-start-line="34" selection-start-column="43" selection-end-line="34" selection-end-column="43" />
           <folding>
             <element signature="e#30#36#1" expanded="true" />
             <element signature="e#30#36#1" expanded="true" />
