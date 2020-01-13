@@ -2,26 +2,41 @@
 <html>
 <head>
     <title>Stay Woke</title>
+
+    <link rel="stylesheet" href="../lib/bootstrap-4.4.1-dist/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <script type="text/javascript" src="js/engine/Engine.js"></script>
     <script type="text/javascript" src="js/engine/Vector.js"></script>
 </head>
 <body onload="main()">
-<div class="content">
-   <div id="game">
-       <div id="blackout">
-           <p>Game Over</p>
-           <p id="score">Score: 0</p>
-           <p>Highscore: 0</p>
-           <form id="scoreform" method="post" action="" style="display: none">
-               <input type="hidden" id="highscore" name="highscore">
-               <input style="width: 500px" type="submit" name="submit" value="Post Highscore">
-           </form>
-           <input style="width: 500px" type="button" onclick="location.reload();" value="Retry?">
-       </div>
-       <canvas id="canvas"></canvas>
-   </div>
+<div class="container">
+    <div class="pb-2 mt-4 mb-2 border-bottom">
+        <h1><span class="color highlight">Stay</span> Woke</h1>
+        <h5>Dalton Turner</h5>
+    </div>
 </div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6">
+            <h3>Overview</h3>
+            <p>Stay Woke is a 2D platformer where the player has to reach the end of the level before time runs out and
+                they fall asleep. Power ups such as energy drinks and coffee are available throughout the level to help
+                the player. The game logic and engine were written in JavaScript.</p>
+        </div>
+        <div class="col-sm-6">
+            <h3>Controls</h3>
+            <p>A: Left, D: Right, Space: Jump, Hold Space: Climb</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <h3>Demo</h3>
+            <canvas id="canvas"></canvas>
+        </div>
+    </div>
+</div>
+
 <script src="js/Game.js"></script>
 </body>
 </html>

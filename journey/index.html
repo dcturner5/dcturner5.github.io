@@ -2,12 +2,13 @@
 <html>
 <head>
     <title>Journey</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="../lib/bootstrap-4.4.1-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div class="container">
-    <div class="page-header">
+    <div class="pb-2 mt-4 mb-2 border-bottom">
         <h1><span class="color highlight">Journey</span></h1>
         <h5>Dalton Turner</h5>
     </div>
@@ -17,37 +18,15 @@
     <div class="row">
         <div class="col-sm-12">
             <h3>Overview</h3>
-        </div>
-        <div class="col-sm-6 col-xs-12">
-            <p>Journey is a 2D platformer about a professor that explores caves and defeats enemies within them. The original idea came from the book: "Journey to the Center of the Earth" by Jules Verne.</p>
-        </div>
-        <div class="col-sm-6 col-xs-12 img-overview">
-            <img src="res/standoff.png" class="img-overview"/>
-            <img src="res/book.png" class="img-overview"/>
+            <p>Journey is a 2D platformer involving a professor that explores caves and defeats enemies within them.
+                The original idea came from the book: "Journey to the Center of the Earth" by Jules Verne.</p>
         </div>
     </div>
-
-    <div class="row">
-        <div class="col-sm-12">
-            <h3>Development</h3>
-        </div>
-        <div class="col-sm-6 col-xs-12">
-            <p>Coding was done in Java 1.8 with no external libraries. Github and SourceTree were used as the version control system and repository. Eclipse Luna was used as the Java development environment.
-            </p>
-        </div>
-        <div class="col-sm-6 col-xs-12 img-dev">
-            <img src="res/java.png" class="img-dev"/>
-            <img src="res/github.png" class="img-dev"/><br>
-            <img src="res/sourcetree.png" class="img-dev"/>
-            <img src="res/eclipse.png" class="img-dev"/>
-        </div>
-    </div>
-
     <div class="row">
         <div class="col-sm-12">
             <h3>Game Mechanics</h3>
         </div>
-        <div class="col-sm-6 col-xs-12">
+        <div class="col-sm-9 col-xs-12">
             <p><span class="highlight">Combat</span></p>
             <p>Defeating enemies involves jumping on top on them while not getting damaged by them</p><br>
             <p><span class="highlight">Climbing</span></p>
@@ -55,7 +34,7 @@
             <p><span class="highlight">Health</span></p>
             <p>Enemies have a chance to drop hearts, which can heal the player</p>
         </div>
-        <div class="col-sm-6 col-xs-12 img-mech">
+        <div class="col-sm-3 col-xs-12">
             <img src="res/enemycombat.png" class="img-mech"/>
             <img src="res/climbingsystem.png" class="img-mech"/>
             <img src="res/heartgain.png" class="img-mech"/>
@@ -66,8 +45,18 @@
         <div class="col-sm-12">
             <h3>Controls</h3>
         </div>
-        <div class="col-sm-12 col-xs-12 img-cont">
-            <img src="res/controls.png" class="img-cont"/>
+        <div class="col-sm-6">
+            <p>Left and Right Arrows: Movement</p>
+            <p>Space: Jump</p>
+            <p>E: Deploy Rope</p>
+            <p>R: Restart Game</p>
+            <p>Esc: Pause Game</p>
+        </div>
+        <div class="col-sm-3">
+            <img src="res/gamecontrols.png"/>
+        </div>
+        <div class="col-sm-3">
+            <img src="res/guicontrols.png"/>
         </div>
     </div>
 
@@ -91,8 +80,6 @@
     <div class="row">
         <div class="col-sm-12">
             <h3>Level Design</h3>
-        </div>
-        <div class="col-sm-12 col-xs-12 img-cont">
             <img src="res/leveldesignslide.png" class="img-cont"/>
         </div>
     </div>
@@ -106,9 +93,9 @@
         </div>
     </div>
 
-    <div class="row buttons">
-        <a href="Journey.jar" download style="display: inline; padding: 0; margin: 0;"><button type="submit" class="btn">Download</button></a>
-        <a href="https://github.com/turner-dalton-wm/Journey" style="display: inline; padding: 0; margin: 0;"><button type="submit" class="btn">Github</button></a>
+    <div class="text-center p-3">
+        <a class="btn btn-primary btn-lg" href="Journey.jar" download>Download</a>
+        <a class="btn btn-primary btn-lg" href="https://github.com/turner-dalton-wm/Journey">Github</a>
     </div>
 </div>
 </body>

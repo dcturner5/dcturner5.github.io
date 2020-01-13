@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>English Parser</title>
+    <script src="js/Word.js"></script>
+    <script src="js/Verb.js"></script>
+    <style>
+        html {
+            font-family: Arial;
+            height: 90%;
+        }
+        body {
+            background-color: #333333;
+            height: 100%;
+        }
+        button {
+            font-size: large;
+        }
+        ul.tab {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+        }
+        ul.tab li {
+            float: left;
+        }
+        ul.tab li a {
+            display: inline-block;
+            color: black;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            transition: 0.3s;
+            font-size: 17px;
+        }
+        ul.tab li a:hover {
+            background-color: #ddd;
+        }
+        ul.tab li a:focus, .active {
+            background-color: #ccc;
+        }
+        .tabcontent {
+            background-color: #ffffff;
+            display: none;
+            padding: 6px 12px;
+            border: 1px solid #ccc;
+            border-top: none;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <ul class="tab">
+        <li><a href="javascript:void(0)" class="tablinks active" onclick="changeTab(event, 'reformat')">Reformat Sentence</a></li>
+        <li><a href="javascript:void(0)" class="tablinks" onclick="changeTab(event, 'verb')">Verb Checker</a></li>
+    </ul>
+    <div id="reformat" class="tabcontent" style="display: block;">
+        <h3>Reformat Sentence</h3>
+        <input id="reformatInput" style="width:45%; height:40px; font-size: x-large;" placeholder="Example: I went to the park yesterday."/>
+        <button onclick="reformatSentence()" style="">Reformat</button>
+        <p id="reformatOutput" style="font-size:xx-large;"></p>
+    </div>
+
+    <div id="verb" class="tabcontent">
+        <h3>Verb Checker</h3>
+        <input id="verbInput" style="width:45%; height:40px; font-size: x-large;" placeholder="Example: went"/>
+        <button onclick="verbCheck()" style="">Check</button>
+        <p id="verbOutput" style="font-size:xx-large;"></p>
+    </div>
+
+    <script>
+        function changeTab(evt, divId) {
+            var i, tabcontent, tablinks;
+
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+
+            document.getElementById(divId).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
+    <script>
+        function reformatSentence() {
+            var input = document.getElementById("reformatInput").value;
+            if(input !== "") {
+                var string = reformat(input);
+                document.getElementById("reformatOutput").innerHTML = string;
+            }
+            else {
+                document.getElementById("reformatOutput").innerHTML = "";
+            }
+        }
+
+        function verbCheck() {
+            var input = document.getElementById("verbInput").value;
+            if(input !== "") {
+                var string = isVerb(input);
+                if(string.base == "") document.getElementById("verbOutput").innerHTML = "Verb not recognized";
+                else document.getElementById("verbOutput").innerHTML = "Base: " + string.base + "<br>Tense: " + string.tense + "<br>Type: " + string.type;
+            }
+            else {
+                document.getElementById("verbOutput").innerHTML = "";
+            }
+        }
+
+        console.log(VERB_COUNT + PREPOSITION_COUNT + ARTICLE_COUNT + CONJUNCTION_COUNT + " words available to search...");
+    </script>
+</body>
+</html>

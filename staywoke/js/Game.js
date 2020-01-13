@@ -1,9 +1,9 @@
 var engine;
 function main() {
     engine = new Engine("canvas", 800, 480);
-    engine.resize();
+    //engine.resize();
     engine.setClearColor('gray');
-    engine.setAutoResize(true);
+    //engine.setAutoResize(true);
 
     engine.init = init;
     engine.update = update;
@@ -15,9 +15,10 @@ function main() {
 //GLOBAL VARIABLES GO HERE:
 var running = true;
 var complete = false;
-var highscore = document.cookie.replace(/(?:(?:^|.*;\s*)highscore\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+var highscore = parseInt(document.cookie.replace(/(?:(?:^|.*;\s*)highscore\s*\=\s*([^;]*).*$)|^.*$/, "$1")) || 0;
 var score = 0;
 var bonus = 0;
+var finalScore = 0;
 
 var timer;
 var time = 300;
@@ -127,38 +128,45 @@ function update() {
             emitters[i].update();
         }
     }
-    else {
-      if(engine.key("SPACE")) {
-          if(score > highscore) {
-              engine.keys[32] = false;
-              if(confirm("Are you sure? You just beat your high score")) {
-                  location.reload();
-              }
-          }
-          else location.reload();
-      }
+    else if(engine.key("ENTER")) {
+        if(highscore < finalScore) {
+            highscore = finalScore;
+            document.cookie = "highscore=" + finalScore;
+        }
+
+        location.reload();
     }
 }
 
 function render(context) {
     engine.clear();
     background.render(context, 0, 0);
-    world.render(context, player.position.sub(new Vector(12 * 32, 7 * 32)).scale(-1));
-    for(var i = 0; i < enemies.length; i++) {
-        enemies[i].render(context, player.position.sub(new Vector(12 * 32, 7 * 32)).scale(-1));
-    }
-    player.render(context);
-    for(var i = 0; i < emitters.length; i++) {
-        emitters[i].render(context, player.position.sub(new Vector(12 * 32, 7 * 32)).scale(-1));
-    }
 
-    //TIME AND SCOREBOARD
-    context.fillStyle = "white";
-    context.font = "20px Arial";
-    context.fillText("TIME", 16, 32);
-    context.fillText(time, 16, 56);
-    context.fillText("SCORE", engine.canvas.width - 88, 32);
-    context.fillText(score + bonus, engine.canvas.width - 88, 56);
+    if(running) {
+        world.render(context, player.position.sub(new Vector(12 * 32, 7 * 32)).scale(-1));
+        for (var i = 0; i < enemies.length; i++) {
+            enemies[i].render(context, player.position.sub(new Vector(12 * 32, 7 * 32)).scale(-1));
+        }
+        player.render(context);
+        for (var i = 0; i < emitters.length; i++) {
+            emitters[i].render(context, player.position.sub(new Vector(12 * 32, 7 * 32)).scale(-1));
+        }
+
+        //TIME AND SCOREBOARD
+        context.fillStyle = "white";
+        context.font = "20px Arial";
+        context.fillText("TIME", 16, 32);
+        context.fillText(time, 16, 56);
+        context.fillText("SCORE", engine.canvas.width - 88, 32);
+        context.fillText(score + bonus, engine.canvas.width - 88, 56);
+    }
+    else {
+        context.fillStyle = "white";
+        context.font = "20px Arial";
+        context.fillText("SCORE: " + finalScore, engine.canvas.width / 2 - 55, 220);
+        context.fillText("HIGHSCORE: "+ parseInt(highscore), engine.canvas.width / 2 - 70, 250);
+        context.fillText("PRESS ENTER TO RESTART", engine.canvas.width / 2 - 130, 280);
+    }
 }
 
 //OBJECT FUNCTIONS GO HERE:
@@ -205,17 +213,9 @@ function Player(position, width, height, spritesheet) {
         time = Math.max(time, 0);
 
         //SHOW DEATH SCREEN
-        var finalScore = score + bonus;
+        finalScore = score + bonus;
         if(complete) {
             finalScore += time;
-        }
-
-        document.getElementById('score').innerHTML = "Score: " + finalScore;
-        document.getElementById('highscore').value = finalScore;
-        document.getElementById('blackout').style.display = "block";
-
-        if(parseInt(highscore) < finalScore) {
-            document.getElementById('scoreform').style.display = "block";
         }
 
         //STOP UPDATING GAME

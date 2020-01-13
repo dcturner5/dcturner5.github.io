@@ -47,6 +47,7 @@ function Engine(canvasId, canvasWidth, canvasHeight) {
     this.key = function(string) {
         var code;
         if(string.length === 1) code = string.charCodeAt(0);
+        else if(string === "ENTER") code = 13;
         else if(string === "SPACE") code = 32;
         else if(string === "LEFT") code = 37;
         else if(string === "UP") code = 38;

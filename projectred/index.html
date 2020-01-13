@@ -2,23 +2,41 @@
 <html lang="en">
 <head>
     <title>Project Red</title>
-    <meta name="theme-color" content="#c80000">
-    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="../lib/bootstrap-4.4.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+
     <script type="text/javascript" src="js/engine/Engine.js"></script>
     <script type="text/javascript" src="js/engine/Vector.js"></script>
 </head>
 <body>
-<br>
-<img src="res/logo.png" width="216" height="46">
-<div>
-    <canvas id="canvas"></canvas>
+<div class="container">
+    <div class="pb-2 mt-4 mb-2 border-bottom">
+        <h1><span class="color highlight">Project</span> Red</h1>
+        <h5>Dalton Turner</h5>
+    </div>
 </div>
-
-<!--<div id="mapoutput" style="float: right">
-    <textarea id="output" readonly></textarea>
-    <button id="print" onclick="(function(){document.getElementById('output').value=world.print();})()">Print</button>
-</div>-->
-
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6">
+            <h3>Overview</h3>
+            <p>Project Red is a multiplayer Pok&eacute;mon clone designed to be played in a web browser. The client-side
+                game logic and engine were built with JavaScript, while the server-side was built with NodeJS and
+                websockets. The demo on this page is the single player version since the server is no longer hosted
+                online.</p>
+        </div>
+        <div class="col-sm-6">
+            <h3>Controls</h3>
+            <p>W: Up, S: Down, A: Left, E: Right, Space: Shoot</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <h3>Demo</h3>
+            <canvas id="canvas"></canvas>
+        </div>
+    </div>
+</div>
 <script type="text/javascript" src="js/Game.js"></script>
 <script type="text/javascript" src="js/World.js"></script>
 </body>

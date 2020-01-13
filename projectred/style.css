@@ -1,0 +1,25 @@
+body {
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+}
+
+h3 {
+    color: #ff0a0a;
+    font-weight: bold;
+}
+
+img {
+    width: 100%;
+}
+
+p {
+    font-size: large;
+}
+
+span.highlight {
+    font-weight: bold;
+}
+
+span.color {
+    color: #ff0a0a;
+}
