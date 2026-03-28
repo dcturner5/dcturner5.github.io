@@ -1,3 +1,9 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: monospace;
+}
+
 h3 {
     color: #77dd77;
     font-weight: bold;

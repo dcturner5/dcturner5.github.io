@@ -7,12 +7,37 @@
 				image-rendering: pixelated;
 			}
 		</style>
+		<link rel="stylesheet" href="../lib/bootstrap-4.4.1-dist/css/bootstrap.min.css">
+		<link rel="stylesheet" href="style.css">
 	</head>
-	<body onload="init()" onresize="resize()" style="text-align:center;">
-		<!-- Container -->
-		<canvas id="Canvas" width="800" height="480" style="border: solid 1px; background:#99D9EA;" oncontextmenu="return false">
-			This Browser Does Not Support This Game. 
-		</canvas>
+	<body onload="init()" onresize="resize()">
+		<div class="container">
+			<div class="pb-2 mt-4 mb-2 border-bottom">
+				<h1><span class="color highlight">2D</span> Minecraft</h1>
+				<h5>Dalton Turner</h5>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6">
+					<h3>Overview</h3>
+					<p>This is a 2D recreation of Minecraft built with JavaScript for the web browser.
+						You can mine blocks, craft, smelt, use some of the redstone mechanics, and mess with water and
+						sand physics.</p>
+				</div>
+				<div class="col-sm-6">
+					<h3>Controls</h3>
+					<p>A: Left, D: Right, Space: Jump, E: Inventory</p>
+					<p>Left click: Break blocks, Right click: Place/Interact with blocks</p>
+				</div>
+			</div>
+		</div>
+		<div class="text-center">
+			<!-- Container -->
+			<canvas id="Canvas" width="800" height="480" style="border: solid 1px; background:#99D9EA;" oncontextmenu="return false">
+				This Browser Does Not Support This Game.
+			</canvas>
+		</div>
 		
 		<!-- Link Scripts -->
 		<script type="text/javascript" src="js/game.js"></script>

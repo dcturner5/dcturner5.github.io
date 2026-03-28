@@ -4,9 +4,40 @@
 		<title>
 			Tower Defense
 		</title>
+		<link rel="stylesheet" href="../lib/bootstrap-4.4.1-dist/css/bootstrap.min.css">
+		<style>
+			body {
+				background-color: black;
+				color: white;
+				font-family: monospace;
+				image-rendering: pixelated;
+				image-rendering: crisp-edges;
+			}
+			span.highlight {
+				font-weight: bold;
+			}
+			span.color {
+				color: #c19710;
+			}
+		</style>
 	</head>
-	<body onload="init()" onresize="resize()" style="text-align:center; image-rendering: pixelated; image-rendering: crisp-edges;">
-	
+	<body onload="init()" onresize="resize()">
+		<div class="container">
+			<div class="pb-2 mt-4 mb-2 border-bottom">
+				<h1><span class="color highlight">Tower</span> Defense</h1>
+				<h5>Dalton Turner</h5>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12">
+					<h3>Overview</h3>
+					<p>This is a tower defense game built with JavaScript for the web browser.
+						Survive each round by buying and placing different types of weapons to defend against enemies.</p>
+				</div>
+			</div>
+		</div>
+		<div class="text-center">
 		<!-- Container -->
 		<canvas id="Canvas" width="800" height="480" style="border:solid 2px black;background:black;">
 			Your Browser Does Not Support This Game.

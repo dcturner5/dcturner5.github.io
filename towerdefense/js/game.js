@@ -718,7 +718,7 @@ function resize() {
 	canvas.height = 480;
 	
 	//Adjust Screen Size
-	var screenheight = window.innerHeight - 32;
+	var screenheight = window.innerHeight - 320;
 	var screenwidth = screenheight / 3 * 5;
 	
 	canvas.style.width =  screenwidth + "px";

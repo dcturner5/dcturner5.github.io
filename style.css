@@ -1,5 +1,12 @@
 body {
     padding-top: 56px;
+    background-color: black;
+    color: #fff;
+    font-family: monospace;
+}
+
+.navbar {
+    background-color: black;
 }
 
 img {

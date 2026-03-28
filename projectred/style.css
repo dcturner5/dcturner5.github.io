@@ -1,4 +1,7 @@
 body {
+    background-color: black;
+    color: white;
+    font-family: monospace;
     image-rendering: pixelated;
     image-rendering: -moz-crisp-edges;
 }

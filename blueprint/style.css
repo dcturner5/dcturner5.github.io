@@ -1,3 +1,9 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: monospace;
+}
+
 div.ide {
     display: inline-block;
     padding: 8px;
@@ -5,10 +11,6 @@ div.ide {
 div.ide div {
     position: relative;
     height: 64px;
-}
-
-div.container {
-    color: black;
 }
 
 p {

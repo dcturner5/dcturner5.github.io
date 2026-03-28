@@ -2,19 +2,8 @@ body {
     background-color: black;
     color: white;
     font-family: monospace;
-}
-
-h3 {
-    color: #fa9200;
-    font-weight: bold;
-}
-
-img {
-    width: 100%;
-}
-
-p {
-    font-size: large;
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
 }
 
 span.highlight {
@@ -22,5 +11,5 @@ span.highlight {
 }
 
 span.color {
-    color: #fa9200;
+    color: #3bac64;
 }

@@ -1285,13 +1285,13 @@ function init() {
 	var FpsLoop = setInterval(function() {game.fps = game.frame; game.frame = 0;}, 1000);
 }
 
-function resize() { 
+function resize() {
 	canvas.width = 800;
 	canvas.height = 480;
-	
-	var screenheight = window.innerHeight - 32;
+
+	var screenheight = window.innerHeight - 320;
 	var screenwidth = screenheight / 3 * 5;
-	
+
 	canvas.style.width =  screenwidth + "px";
 	canvas.style.height = screenheight + "px";
 }
